@@ -1,0 +1,8 @@
+During the Cap machine challenge on Hack The Box, I began with a standard Nmap scan, which revealed open TCP ports for SSH and HTTP. Exploring the web service, I attempted URL manipulation, which allowed access to the restricted root page. 
+  From there, I downloaded the PCAP file and analyzed it using Wireshark, successfully extracting the user’s credentials.
+
+With these credentials, I SSHed into the target machine.
+  For privilege escalation, I first ran linPEAS.sh to identify potential vulnerabilities and then exploited a Python 3.8 setUID(0) technique, ultimately gaining root access and capturing the root flag.
+
+This exercise reinforced the importance of enumeration, web application testing, packet analysis, and privilege escalation techniques, 
+  showcasing a full attack chain from initial access to root compromise.
